@@ -5,8 +5,8 @@
 // Якщо це так - виведіть 'так', інакше виведіть 'ні'.
 
 // let message;
-// const str = "abcde"; 
-// if (str.startsWith("a")) { 
+// const str = "abcde";
+// if (str.startsWith("a")) {
 // console.log("Yes");
 // }else {
 //     console.log("No");
@@ -20,6 +20,18 @@
 // Якщо умова не виконується - вивести “неможливо виконати умову”.
 // Наприклад: “Віктор Сташко” Віктор - 6 літер, Сташко - 6 літер. Виводимо 12.
 // Використовувати вбудований метод length.
+
+// const firstName = 'Bobys';
+// const lastName = 'Marleys';
+// const firstNameLength = firstName.length;
+// const lastNameLength = lastName.length;
+// const totalLetters = firstNameLength + lastNameLength;
+// if (firstName.length > 4 && lastName.length >5) {
+//     console.log(firstName.length + lastName.length);
+// } else {
+//     console.log('неможливо виконати умову');
+// }
+// firstNameLength > 4 && lastNameLength > 5 ? console.log(totalLetters)  : console.log('неможливо виконати умову');
 
 //TODO: 3 ===================================
 // Написати скрипт, який перевіряє чи введене число через prompt потрапляє в діапазон від 55 до 99 включно.
