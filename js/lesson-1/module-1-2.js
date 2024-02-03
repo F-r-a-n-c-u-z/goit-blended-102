@@ -119,29 +119,60 @@
 // Робити перевірку,що користувач ввів саме число,
 // а не довільний набір символів, не потрібно.
 
-let total = 0;
-let num;
-do {
-  num = prompt('Введіть число');
+// let total = 0;
+// let num;
+// do {
+//   num = prompt('Введіть число');
 
-  if (num === null) break;
-  num = parseFloat(num);
-  if (!isNaN(num)) {
-    total += num;
-  }
-} while (true);
-alert(`Загальна сума введених чисел дорівнює ${total}.`);
+//   if (num === null) break;
+//   num = parseFloat(num);
+//   if (!isNaN(num)) {
+//     total += num;
+//   }
+// } while (true);
+// alert(`Загальна сума введених чисел дорівнює ${total}.`);
 
 //* Цикл for директива break і continue
 //TODO: 9 ===================================
 //Напишіть цикл, який виводить у консоль
 // числа від max до min за спаданням
 // Додайте усі парні числа від min до max
-
+// const min = 2;
+// const max = 29;
+// let total = 0;
+// for (let index = max; index >= min; index-=1) {
+//     if (index % 2!== 0) {
+//         continue
+//     }
+//     console.log("парні :", index);
+//     total += index;
+// }
 // console.log(`Сума усіх парних: ${total}`);
+
+
 
 //TODO: 10 ===================================
 // Знайдіть число 49  у проміжку чисел від 1 до 100 та вийдіть з циклу.
+
+// const min = 1;
+// const max = 100;
+// const value = 49;
+//  for (let index = min; index <= max; index++) {
+//      if (index === value) {
+//          console.log(index);
+//          break;
+//    }
+    
+//  }
+
+// for (let index = min; index <= max; index++) {
+//      if (index !== value) {
+//          continue;
+//      } else {
+//          console.log(index);
+//    }
+    
+//  }
 
 //TODO: 11 ===================================
 //  Виведіть методом console.log() зірочки від 1 до 7 штук у вигляді трикутника таким чино
