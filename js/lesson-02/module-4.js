@@ -3,12 +3,34 @@
 //TODO:============task-01==============================================
 // Створіть об'єкт "прямокутник" з властивостями "довжина" та "ширина". Напишіть метод "calculateArea", який буде обчислювати площу прямокутника на основі його довжини та ширини.
 
+// const square = {
+//     height: 25,
+//     width: 10,
+
+//     calculateArea () {
+//         return this.height * this.width;
+//     }
+
+// }
 // console.log(square.calculateArea());
 
 //TODO:============task-02==============================================
 // Створіть об'єкт "магазин" зі списком товарів. Напишіть метод "hasProduct", який буде перевіряти, чи є певний товар в наявності на складі магазину.
 
-// console.log(store.hasProduct('apple'));
+// const store = {
+//     products: ["apple", "banana", "tomato"],
+
+//     addProduct(newProduct) {
+//         this.products.push(newProduct);
+//     },
+
+//     hasProduct(product) {
+//         return this.products.includes(product);
+//     }
+// }
+// console.log(store.hasProduct('kiwi'));
+// store.addProduct("kiwi");
+// console.log(store.hasProduct('kiwi'));
 
 //! Перебір об'єктів: for...in і методи Object.keys|values|entries
 //TODO:============task-03======================================================
