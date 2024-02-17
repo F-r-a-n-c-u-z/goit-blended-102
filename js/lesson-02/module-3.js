@@ -1,12 +1,26 @@
 // ! Масиви і функції
 //TODO:=========task-01=================
 //Перетворити рядок, що містить слова, розділені комами, в масив слів і вивести кожне слово в окремому рядку.
+
 // const str = 'JavaScript, HTML, CSS, React';
+// const strArr = str.split(", ");
+// console.log(strArr);
+// for (const key of strArr) {
+//     console.log(key);
+// }
 
 //TODO:=========task-02=================
 // Знайти кількість слів у рядку, використовуючи методи масивів та цикл for...of.
 
 // const message = 'JavaScript is a popular programming language.';
+// // console.log(message.split(" ").length);
+// const normolizedMessage = message.split(" ");
+// let count = 0;
+// for (const key of normolizedMessage) {
+//     count += 1;
+// }
+// console.log(count);
+
 
 //TODO:=========task-03=================
 // Об'єднати масив слів в рядок, розділений комами та пробілами.
