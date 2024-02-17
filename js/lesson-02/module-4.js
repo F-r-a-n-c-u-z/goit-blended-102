@@ -43,11 +43,11 @@
 //   name: 'Igor',
 //   car: 'Mercedes',
 //   carColor: 'black',
-  
+
 // };
 // function getBool(obj, key) {
 //     return Object.keys(obj).includes(key);
-    
+
 // }
 // // console.log(Object.entries(obj));
 // console.log(getBool(obj, 'car')); // true
@@ -67,7 +67,7 @@
 // let sum = 0;
 // for (const number of Object.values(salaries)) {
 //     sum += number;
-    
+
 // }
 
 // console.log(sum);
@@ -87,7 +87,6 @@
 
 // console.log(Object.entries(user));
 
-
 //TODO:============task-06======================================================
 // Створіть функцію multiplyNumeric(obj),
 // яка множить всі числові властивості об'єкта obj на 2.
@@ -99,6 +98,14 @@
 //   title: 'My menu',
 // };
 
+// function multiplyNumeric(obj) {
+//   for (const key in obj) {
+//     if (obj.hasOwnProperty(key) && typeof obj[key] === 'number') {
+//       obj[key] *= 2;
+//     }
+//   }
+//   return obj;
+// }
 // console.log(multiplyNumeric(menu));
 
 // після виклику функції
