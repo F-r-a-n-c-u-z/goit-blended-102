@@ -21,7 +21,6 @@
 // }
 // console.log(count);
 
-
 //TODO:=========task-03=================
 // Об'єднати масив слів в рядок, розділений комами та пробілами.
 // const words = ['JavaScript', 'HTML', 'CSS', 'React'];
@@ -38,7 +37,6 @@
 //         filtredArray.push(word);
 //     }
 // }
-
 
 // console.log(
 //   `Масив елементів, що містять підстроку ${substring} : ${filtredArray.join(" i ")}`
@@ -83,11 +81,10 @@
 //     }
 // }
 
-
 // function min(a=10, b=15) {
 //     if (typeof a !== "number" || typeof b !== "number") {
 //         throw new Error("Arg must be number")
-//     } 
+//     }
 //     return Math.min(a, b);
 // }
 // console.log(min());
@@ -95,12 +92,12 @@
 // TODO:=============task-07=================
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
 
-const numbers = [22, 11, 34, 5, 12, 13, 14, 15];
+// const numbers = [22, 11, 34, 5, 12, 13, 14, 15];
 // function sumArray (arr = []) {
 //     const newArray = [];
 //     for (let index = 0; index < arr.length - 1; index++) {
 //         newArray.push(arr[index] + arr[index + 1])
-        
+
 //     }
 //     return newArray;
 // }
@@ -108,17 +105,17 @@ const numbers = [22, 11, 34, 5, 12, 13, 14, 15];
 
 // console.log(result); // [33, 45, 39, 17, 25, 27, 29]
 
-function evenArrayNumbers (arr = []) {
-    const newArray = [];
-    for (const number of arr) {
-        if (number % 2 !==0){
-            continue 
-        }
-        newArray.push(number)
-    }
-    return newArray
-}
-console.log(evenArrayNumbers(numbers))
+// function evenArrayNumbers (arr = []) {
+//     const newArray = [];
+//     for (const number of arr) {
+//         if (number % 2 !==0){
+//             continue
+//         }
+//         newArray.push(number)
+//     }
+//     return newArray
+// }
+// console.log(evenArrayNumbers(numbers))
 
 //TODO:=========task-08=================
 //Напишіть функцію caclculateAverage()
@@ -126,10 +123,37 @@ console.log(evenArrayNumbers(numbers))
 //аргументів і повертає їхнє середнє значення.
 //Додати перевірку, що аргументи це числа.
 
-// console.log(calculateAverage(10, 10, 20, 200));
+// function calculateAverage(...args) {
+// console.log(arguments);
+// console.log(args);
+//     let total = 0;
+//     let count = 0;
+//   for (const item of args) {
+//     if (typeof item !== 'number') {
+//       continue
+//       }
+//       total += item;
+//       count += 1;
+//     }
+//     return total / count;
+// }
+
+// console.log(calculateAverage(10, "10", 20, 200));
 
 //TODO:=========task-09=================
 // Знайти перший парний елемент масиву, який більший за 10, використовуючи цикл з оператором break та continue.
-// const numbers = [5, 11, 21, 8, 7, 15, 11, 11];
+// const numbers = [5, 11, 21, 20, 8, 7, 30, 15, 11, 11];
 
-// console.log(getOddNumbers(numbers));
+// function getEvenNumbers(arr = []) {
+//   let result = null;
+//   for (const number of arr) {
+//     if (number % 2 !== 0 || number <= 10) {
+//       continue;
+//     }
+//     result = `first number higher 10: ${number}`;
+//     break;
+//     }
+//     return result === null ? "no even numbers" : result
+// }
+
+// console.log(getEvenNumbers(numbers));
