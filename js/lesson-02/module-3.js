@@ -84,18 +84,41 @@
 // }
 
 
-// function min(a, b) {
+// function min(a=10, b=15) {
 //     if (typeof a !== "number" || typeof b !== "number") {
 //         throw new Error("Arg must be number")
 //     } 
 //     return Math.min(a, b);
 // }
-// console.log(min("Hi", 5));
+// console.log(min());
 
-//TODO:=============task-07=================
+// TODO:=============task-07=================
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
 
+const numbers = [22, 11, 34, 5, 12, 13, 14, 15];
+// function sumArray (arr = []) {
+//     const newArray = [];
+//     for (let index = 0; index < arr.length - 1; index++) {
+//         newArray.push(arr[index] + arr[index + 1])
+        
+//     }
+//     return newArray;
+// }
+// const result = sumArray(numbers)
+
 // console.log(result); // [33, 45, 39, 17, 25, 27, 29]
+
+function evenArrayNumbers (arr = []) {
+    const newArray = [];
+    for (const number of arr) {
+        if (number % 2 !==0){
+            continue 
+        }
+        newArray.push(number)
+    }
+    return newArray
+}
+console.log(evenArrayNumbers(numbers))
 
 //TODO:=========task-08=================
 //Напишіть функцію caclculateAverage()
