@@ -25,15 +25,23 @@
 //TODO:=========task-03=================
 // Об'єднати масив слів в рядок, розділений комами та пробілами.
 // const words = ['JavaScript', 'HTML', 'CSS', 'React'];
+// console.log(words.join("-").toLocaleLowerCase().replaceAll("-", ", "));
 
 //TODO:=========task-04=================
 // Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." .Результат повинен бути розділений комами та пробілами.(використати indexOf)
 
 // const stringArray = ['JavaScript', 'HTML', 'CSS', 'React'];
 // const substring = 'S';
+// const filtredArray = [];
+// for (const word of stringArray) {
+//     if (word.indexOf(substring) !== -1) {
+//         filtredArray.push(word);
+//     }
+// }
+
 
 // console.log(
-//   `Масив елементів, що містять підстроку ${substring} : ${joinedArray}`
+//   `Масив елементів, що містять підстроку ${substring} : ${filtredArray.join(" i ")}`
 // );
 
 //TODO:=========task-05=================
