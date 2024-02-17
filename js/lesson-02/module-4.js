@@ -39,11 +39,17 @@
 // Є 2 варіанти рішення, спочатку напишемо функцію, потім вирішимо простим способом
 
 // const obj = {
+
 //   name: 'Igor',
 //   car: 'Mercedes',
 //   carColor: 'black',
+  
 // };
-
+// function getBool(obj, key) {
+//     return Object.keys(obj).includes(key);
+    
+// }
+// // console.log(Object.entries(obj));
 // console.log(getBool(obj, 'car')); // true
 
 //TODO:============task-04======================================================
@@ -58,6 +64,11 @@
 //   Poly: 160,
 //   Ajax: 1470,
 // };
+// let sum = 0;
+// for (const number of Object.values(salaries)) {
+//     sum += number;
+    
+// }
 
 // console.log(sum);
 
@@ -74,7 +85,8 @@
 //   merried: false,
 // };
 
-// changeObject(user);
+// console.log(Object.entries(user));
+
 
 //TODO:============task-06======================================================
 // Створіть функцію multiplyNumeric(obj),
