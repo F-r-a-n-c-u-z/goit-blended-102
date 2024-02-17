@@ -47,12 +47,50 @@
 //TODO:=========task-05=================
 // Перевірити, чи містить масив заданий елемент. Якщо містить, видалити його, якщо ні - додати в кінець масиву.
 //  const array = ['JavaScript', 'HTML', 'CSS', 'SS'];
-//  const elem = 'SS';
+// const elem = 'SS';
+//  const index = array.indexOf(elem);
+
+// console.log(index);
+
+// if (index !== -1) {
+//     array.splice(index, 1);
+// } else {
+//     array.push(elem);
+// }
+
+// index !== -1? array.splice(index, 1): array.push(elem);
+
+// console.log(array);
+
+// function transformArr(arr, el) {
+//     const index = arr.indexOf(el);
+//     index !== -1 ? arr.splice(index, 1) : arr.push(el);
+//     return arr;
+// }
+
+// console.log(transformArr(array, elem));
 
 //TODO:============task-06==============
 // Напишіть функцію min(a, b), яка повертає
 // менше з чисел a, b
 // Потрібно додати перевірку, що функція отримує числа
+
+// function min(a, b) {
+//     if (typeof a === "number" && typeof b === "number") {
+//         return Math.min(a, b);
+//     } else {
+//         return "Не є числом";
+//     }
+// }
+
+
+// function min(a, b) {
+//     if (typeof a !== "number" || typeof b !== "number") {
+//         throw new Error("Arg must be number")
+//     } 
+//     return Math.min(a, b);
+// }
+// console.log(min("Hi", 5));
 
 //TODO:=============task-07=================
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
