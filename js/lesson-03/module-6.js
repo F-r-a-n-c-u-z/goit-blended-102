@@ -3,23 +3,23 @@
 // Створити об'єкт, який представляє користувача. У об'єкті повинні бути наступні поля: ім'я, прізвище, вік, email та метод, який виводить повну інформацію про користувача.
 
 const user = {
-    name: "Olga",
-    lastName: "Kukla",
-    age: 30,
-    email: "olga.kukla@gmail.com",
+  name: 'Olga',
+  lastName: 'Kukla',
+  age: 30,
+  email: 'olga.kukla@gmail.com',
 
-    fullInfo() {
-      console.log(this);  
-    },
-    modify(key, value) {
-        if (key !== "name" && key !== "lastName") {
-            return alert("invalide key");
-        }
-        if (value[0] === value[0].toUpperCase() && value.length >= 3) {
-            return this[key] = value;
-        }
+  fullInfo() {
+    console.log(this);
+  },
+  modify(key, value) {
+    if (key !== 'name' && key !== 'lastName') {
+      return alert('invalide key');
     }
-}
+    if (value[0] === value[0].toUpperCase() && value.length >= 3) {
+      return (this[key] = value);
+    }
+  },
+};
 
 // user.modify("age", "vlad");
 // console.log(user);
@@ -27,7 +27,6 @@ const user = {
 // const user1 = Object.create(user);
 // user1.name = "Bob";
 // user1.lastName = "Lasso";
-
 
 // console.log(user1);
 
@@ -43,12 +42,11 @@ const user = {
 // Створити глобальну функцію для обьекта "user", що може додавати властивості об'єкту, в контексті якого вона буде викликана. Додати цю функцію як метод об'єкта user, та додати за допомогою неї властивість friends із значенням:
 
 function addProperty(key, value) {
-    this[key] = value;
+  this[key] = value;
 }
 
 user.addProperty = addProperty;
 console.log(user);
-
 
 user.addProperty('friends', [
   {
@@ -84,16 +82,14 @@ const obj = {
 };
 
 console.log(user.fullInfo.call(obj));
-user.modify.call(obj, "name", "John");
+user.modify.call(obj, 'name', 'John');
 console.log(obj);
-
-
 
 //TODO:=========task-05=================
 //  Викличте функцію showFullName у контексті об'єкта user
 
 function showFullName(massage, number) {
-    console.log(`${massage}, ${this.name} ${this.lastName}, ${number}`);
+  console.log(`${massage}, ${this.name} ${this.lastName}, ${number}`);
 }
 showFullName.apply(user, ['Hello', 10]);
 showFullName.call(obj, 'Hello', 10);
@@ -133,22 +129,68 @@ callAction(product.showPrice.bind(product));
 
 // #### Також потрібно створити клас `MenuItem`, який містить властивості `name` та `price` для предметів замовлення.
 
+class Order {
+  #tableNumber;
+  #items;
+  #isPaid;
+  constructor(tableNumber) {
+    this.#tableNumber = tableNumber;
+    this.#items = [];
+    this.#isPaid = false;
+  }
+
+  calculateTotal() {
+    return this.#items.reduce((acc, item) => acc + item.price, 0);
+  }
+
+  markAsPaid() {
+    this.#isPaid = true;
+  }
+
+  addItem(item) {
+    this.#items.push(item);
+  }
+
+  removeItem(item) {
+    const index = this.#items.indexOf(item);
+    if (index !== -1) {
+      this.#items.slice(index, 1);
+    }
+  }
+
+  get tableNumber() {
+    return this.#tableNumber;
+  }
+
+  get isPaid() {
+    return this.#isPaid;
+  }
+}
+
+class MenuItem {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+}
+
 // Create menu items
-// const item1 = new MenuItem('Burger', 10);
-// const item2 = new MenuItem('Fries', 5);
-// const item3 = new MenuItem('Drink', 2);
+const item1 = new MenuItem('Burger', 10);
+const item2 = new MenuItem('Fries', 5);
+const item3 = new MenuItem('Drink', 2);
+console.log(item1);
 
 // Create an order
-// const order = new Order(1);
+const order = new Order(1);
 
 // Add items to the order
-// order.addItem(item1);
-// order.addItem(item2);
-// order.addItem(item3);
+order.addItem(item1);
+order.addItem(item2);
+order.addItem(item3);
 
 // Calculate the total and mark the order as paid
-// const total = order.calculateTotal();
-// order.markAsPaid();
+const total = order.calculateTotal();
+order.markAsPaid();
 
-// console.log(`Order for table ${order.tableNumber} - Total: $${total}`);
-// console.log(`Is paid: ${order.isPaid}`);
+console.log(`Order for table ${order.tableNumber} - Total: $${total}`);
+console.log(`Is paid: ${order.isPaid}`);
