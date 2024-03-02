@@ -95,7 +95,11 @@
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
+// function sortedArray(arr) {
+//     return arr.toSorted((b, a) => a.localeCompare(b));
+// }
 
+// console.log(sortedArray(stringArray));
 //TODO:===============task-8===============================
 //  Відсортуйте масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19} за віком у порядку зростання. Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
 
@@ -105,21 +109,45 @@
 //   { name: 'Bob', age: 19 },
 // ];
 
+// function sortedUsers(arr) {
+//   return arr.toSorted((a, b) => a.age - b.age);
+// }
+
+// console.log(sortedUsers(users));
 //TODO:=========task-09=================
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
-// const user = [
+// const users = [
 //   { name: 'John', age: 27 },
 //   { name: 'Jane', age: 31 },
 //   { name: 'Bob', age: 19 },
 // ];
 
+// function newArray(arr) {
+//   return arr.filter(user => user.age > 20)
+// }
+
+// console.log(newArray(users));
 //TODO:=========task-10=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
 
 // const numbers = [1, 2, 3, 4, 5];
 
+// function newArray(arr) {
+//   return arr.reduce((acc, number) => acc + number, 20)
+// }
+
+// console.log(newArray(numbers));
+
 //TODO:=========task-11=================
 // У вас є масив чисел, і вам потрібно знайти середнє значення цих чисел. Напишіть функцію, яка приймає масив чисел і повертає середнє значення.
 
 // const arr = [1, 2, 3, 4, 5];
+// function averageValue(arr) {
+//   // const total = arr.reduce((acc, number) => acc + number, 0);
+//   // return total / arr.length;
+
+//   return arr.reduce((acc, number) => acc + number / arr.length, 0);
+// }
+
+// console.log(averageValue(arr));
