@@ -75,21 +75,40 @@
 
 // console.log(isAdoult(people));
 
-
 //TODO:=========task-04=================
 //  Дано масив чисел [2, 4, 6, 8, 10]. Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
 
 // const numbers = [2, 4, 6, 8, 10];
+
+// function isEven(arr) {
+//   return arr.every(number => number % 2 === 0);
+// }
+
+// console.log(isEven(numbers));
 
 //TODO:=========task-05=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Знайдіть перший елемент, більший за 3. Очікуваний результат: 4.
 
 // const numbers = [1, 2, 3, 4, 5];
 
+// function numberFind(arr) {
+//   return arr.find(number => number > 3);
+// }
+
+// console.log(numberFind(numbers));
+
 //TODO:=========task-06=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
-// const numbersArray = [4, 2, 5, 1, 3];
+// const numbersArray = [4, 200, 5, 1, 3];
+
+// function sortedArr(arr) {
+//   //   return [...arr].sort((a, b) => a - b);
+//   return arr.toSorted((a, b) => a - b);
+// }
+
+// console.log(sortedArr(numbersArray));
+// console.log(numbersArray);
 
 //TODO:===============task-07===============================
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
