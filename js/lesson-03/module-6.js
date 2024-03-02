@@ -2,6 +2,38 @@
 //TODO:=========task-01=================
 // Створити об'єкт, який представляє користувача. У об'єкті повинні бути наступні поля: ім'я, прізвище, вік, email та метод, який виводить повну інформацію про користувача.
 
+const user = {
+    name: "Olga",
+    lastName: "Kukla",
+    age: 30,
+    email: "olga.kukla@gmail.com",
+
+    fullInfo() {
+      console.log(this);  
+    },
+    modify(key, value) {
+        if (key !== "name" && key !== "lastName") {
+            return alert("invalide key");
+        }
+        if (value[0] === value[0].toUpperCase() && value.length >= 3) {
+            return this[key] = value;
+        }
+    }
+}
+
+// user.modify("age", "vlad");
+// console.log(user);
+
+// const user1 = Object.create(user);
+// user1.name = "Bob";
+// user1.lastName = "Lasso";
+
+
+// console.log(user1);
+
+// console.log(user.fullInfo());
+// console.log(user1.fullInfo());
+
 //TODO:=========task-02=================
 // Для обьекта "user", написати метод для зміни ім'я або прізвища(змінити можна лише якесь з цих полів, змінювати або додавати нові потрібно заборонити) з перевіркою на валідність даних(Перша літера має бути у верхньому реєстрі, довжина слова не менше 3 літер)
 
@@ -10,58 +42,78 @@
 //TODO:=========task-03=================
 // Створити глобальну функцію для обьекта "user", що може додавати властивості об'єкту, в контексті якого вона буде викликана. Додати цю функцію як метод об'єкта user, та додати за допомогою неї властивість friends із значенням:
 
-// user.addProperty('friends', [
-//   {
-//     firstName: 'Mary',
-//     lastName: 'Smith',
-//     age: 32,
-//     email: 'marysmith@hotmail.com',
-//   },
-//   {
-//     firstName: 'Alex',
-//     lastName: 'Johnson',
-//     age: 45,
-//     email: 'alex.johnson@yahoo.com',
-//   },
-//   {
-//     firstName: 'Emily',
-//     lastName: 'Davis',
-//     age: 19,
-//     email: 'emilydavis@gmail.com',
-//   },
-// ]);
+function addProperty(key, value) {
+    this[key] = value;
+}
 
-// console.log(user);
+user.addProperty = addProperty;
+console.log(user);
+
+
+user.addProperty('friends', [
+  {
+    firstName: 'Mary',
+    lastName: 'Smith',
+    age: 32,
+    email: 'marysmith@hotmail.com',
+  },
+  {
+    firstName: 'Alex',
+    lastName: 'Johnson',
+    age: 45,
+    email: 'alex.johnson@yahoo.com',
+  },
+  {
+    firstName: 'Emily',
+    lastName: 'Davis',
+    age: 19,
+    email: 'emilydavis@gmail.com',
+  },
+]);
+
+console.log(user);
 
 //TODO:=========task-04=================
 //  Викликати метод user.info() таким чином, щоб він вивів результатом  ({name: 'Bob', lactName: 'Lasso',age: 50, email: 'BodLasso@gmail.com'})
 
-// const obj = {
-//   name: 'Bob',
-//   lastName: 'Lasso',
-//   age: 50,
-//   email: 'BodLasso@gmail.com',
-// };
+const obj = {
+  name: 'Bob',
+  lastName: 'Lasso',
+  age: 50,
+  email: 'BodLasso@gmail.com',
+};
+
+console.log(user.fullInfo.call(obj));
+user.modify.call(obj, "name", "John");
+console.log(obj);
+
+
 
 //TODO:=========task-05=================
 //  Викличте функцію showFullName у контексті об'єкта user
 
+function showFullName(massage, number) {
+    console.log(`${massage}, ${this.name} ${this.lastName}, ${number}`);
+}
+showFullName.apply(user, ['Hello', 10]);
+showFullName.call(obj, 'Hello', 10);
+
 //TODO:=========task-06=================
 // Виправте помилки, щоб код працював
 
-// const product = {
-//   price: 5000,
+const product = {
+  price: 5000,
 
-//   showPrice() {
-//     console.log(this.price);
-//   },
-// };
+  showPrice() {
+    console.log(this.price);
+  },
+};
 
-// function callAction(callback) {
-//   callback();
-// }
+function callAction(callback) {
+  callback();
+}
 
-// callAction(product.showPrice);
+callAction(product.showPrice.bind(product));
 
 //! class
 //TODO:=================task-01=============================
