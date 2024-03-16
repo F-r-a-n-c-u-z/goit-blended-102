@@ -26,3 +26,17 @@
 .odd {
     background-color: #ffed3b;
 }
+
+.success{
+    border: 2px solid green;
+}
+
+.error{
+    border: 2px solid red;
+}
+
+input{
+    outline: none;
+}
+
+
