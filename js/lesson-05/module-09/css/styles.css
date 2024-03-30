@@ -130,9 +130,11 @@ button:active {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -176,13 +178,14 @@ button:active {
   transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background: linear-gradient(90grad, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(-24px);
 }
+
 .slider,
 .round {
   border-radius: 34px;
@@ -192,9 +195,10 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-input:checked + .round::before {
+input:checked+.round::before {
   background-color: hsl(230, 17%, 14%);
 }
+
 /* /THEME/ */
 .dark {
   --main-background: hsl(230, 17%, 14%);
@@ -206,12 +210,20 @@ input:checked + .round::before {
   --main-font: hsl(230, 17%, 14%);
 }
 
+body.dark h1,
+body.dark h2,
+body.dark button {
+  color: #fff;
+}
+
+
 .toggle-switch {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
 .toggle-switch p {
   padding: 1em;
 }
@@ -283,19 +295,23 @@ li {
   display: flex;
   justify-content: space-between;
 }
+
 li div {
   display: flex;
   gap: 8px;
 }
+
 li input {
   width: 70%;
   border: none;
   background-color: #f2f2f2;
 }
+
 li input.active {
   width: 70%;
   background-color: #ffffff;
 }
+
 li button[data-action='edit'] {
   background-color: #355075;
   color: #fff;
@@ -304,6 +320,7 @@ li button[data-action='edit'] {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
 li button[data-action='edit'].active {
   background-color: #2f7600;
   color: #fff;
@@ -317,6 +334,7 @@ li button[data-action='delete'] {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
 li button:hover {
   opacity: 0.8;
 }
@@ -347,7 +365,8 @@ li button:hover {
 }
 
 .checked {
-  color: red; /* або будь-який інший стиль, який ви хочете застосувати до сердечка улюбленої страви */
+  color: red;
+  /* або будь-який інший стиль, який ви хочете застосувати до сердечка улюбленої страви */
 }
 
 img {
